@@ -11,4 +11,4 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 if __name__ == "__main__":
-    uvicorn.run(app, host=settings.host, port=settings.port)
+    uvicorn.run("main:app", host=settings.host, port=settings.port, reload=True)
